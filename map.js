@@ -8,7 +8,7 @@ const map = new mapboxgl.Map({
 });
 
 map.on('load', function() {
-    $.getJSON("./js/frontline.json", {}, function(data) {
+/*    $.getJSON("./js/frontline.json", {}, function(data) {
         data.features.forEach(function(marker) {
             var el = document.createElement('div');
             el.className = 'label';
@@ -29,4 +29,5 @@ map.on('load', function() {
               .addTo(map);
         });
     });
+*/
 });
