@@ -13,17 +13,17 @@
     <title>HackProject</title>
 
     <!-- Icons font CSS-->
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <!-- Font special for pages-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
     <!-- Vendor CSS-->
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+    <link href="../vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href=".../vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <link href="css/main.css" rel="stylesheet" media="all">
+    <link href="../css/main.css" rel="stylesheet" media="all">
 </head>
 
 <body>
@@ -34,23 +34,23 @@
                     <h2 class="title">Report Form</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form action="view/submit.php" method="GET">
                         <div class="form-row m-b-55">
                             <div class="name">Name</div>
                             <div class="value">
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="witness_name">
+                                            <input class="input--style-5" type="text" name="Witness_name">
                                             <label class="label--desc">Witness Name</label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="last_name">
-                                            <label class="label--desc">Victim's Name</label>
+                                            <input class="input--style-5" type="text" name="Suspect_name">
+                                            <label class="label--desc">Suspect's Name</label>
                                         </div>
-                                    </div>									
+                                    </div>                                  
                                 </div>
                             </div>
                         </div>
@@ -60,22 +60,22 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="witness_name">
-                                            <label class="label--desc">Suspect's Name</label>
+                                            <input class="input--style-5" type="text" name="Victim_name">
+                                            <label class="label--desc">Victim's Name</label>
                                         </div>
-                                    </div>							
+                                    </div>                          
                                 </div>
                             </div>
                         </div>
-						<div class="form-row">
+                        <div class="form-row">
                             <div class="name">Image</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="file" name="images">
+                                    <input class="input--style-5" type="file" name="Image">
                                 </div>
                             </div>
                         </div>
-						<div class="form-row">
+                        <div class="form-row">
                             <div class="name">Video</div>
                             <div class="value">
                                 <div class="input-group">
@@ -87,38 +87,40 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="email">
+                                    <input class="input--style-5" type="email" name="Email">
                                 </div>
                             </div>
                         </div>
-						
+                        
 
-						
+                        
                         <div class="form-row m-b-55">
                             <div class="name">Phone</div>
                             <div class="value">
                                 <div class="row row-refine">
                                     <div class="col-9">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="number" name="phone">
+                                            <input class="input--style-5" type="number" name="Phone">
                                             <label class="label--desc">Phone Number</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+                        <input class="input--style-5" type="hidden" name="Status">
+                        <input class="input--style-5" type="hidden" name="Latitude">
+                        <input class="input--style-5" type="hidden" name="Longitude">
                         <div class="form-row">
                             <div class="name">Additional Message</div>
                             <div class="value">
                                 <div class="input-group">
-									<textarea class="input--style-5" rows="4" cols="50" name="comments" id="comments" style="font-family:sans-serif;font-size:1.0em;"></textarea>
+                                    <textarea class="input--style-5" rows="4" cols="50" name="Message" id="comments" style="font-family:sans-serif;font-size:1.0em;"></textarea>
                                 </div>
                             </div>
                         </div>
-						
+                        
                         <div>
-                            <button class="btn btn--radius-2 btn--red" type="submit">Submit</button>
+                            <input type='submit' class="btn btn--radius-2 btn--red" name="submit1" type="submit" value="Submit">
                         </div>
                     </form>
                 </div>
