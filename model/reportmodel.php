@@ -4,6 +4,7 @@
 		var $status;
 		var $suspect_name;
 		var $victims_name;
+		var $latitude;
 		var $longitude;
 		var $image;
 		var $video;
