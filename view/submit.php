@@ -3,35 +3,33 @@
 	error_reporting(E_ALL & ~E_NOTICE);
 	
 	include("../model/reportmodel.php");
-	include("../controller/ReportController.php");
+	include("../ReportController.php");
 	
 	if($_GET['submit1'])
 	{
 		//echo "na-click ang add button";
 		
-		$rep = new Person();
-		$pcon = new PersonController();
+		$rep = new report();
+		$pcon = new ReportController();
 	
 		
-	$rep -> setStatus ($_GET['']);	
-	$rep -> setSuspect_Name ($_GET['']);
-	$rep -> setVictim_Name ($_GET['']);
-	$rep -> setLatitude ($_GET['']);
-	$rep -> setLongtitude ($_GET['']);	
-	$rep -> setImage ($_GET['']);		
-	$rep -> setWitness_Name ($_GET['']);
-	$rep -> setWitness_email ($_GET['']);
-	$rep -> setWitness_number ($_GET['']);
-	$rep -> setMessage ($_GET['']);
+	$rep -> setStatus($_GET['Status']);
+    $rep -> setSuspect_name($_GET['Suspect_name']);
+	$rep -> setVictim_name($_GET['Victim_name']);
+    $rep -> setLatitude($_GET['Latitude']);	
+    $rep -> setLongitude($_GET['Longitude']);
+	$rep -> setImage ($_GET['Image']);
+	$rep -> setVideo ($_GET['Video']);		
+	$rep -> setWitness_name ($_GET['Witness_name']);
+	$rep -> setWitness_email ($_GET['Email']);
+	$rep -> setWitness_number ($_GET['Phone']);
+	$rep -> setMessage ($_GET['Message']);
 
 
 
 		$pcon->AddReport($rep);
-		echo"<script>alert('One Record Was Successfully Added')</script>";
 		
-		echo"<meta http-equiv='refresh' 
-			content=0;url=viewreport.php>";
-	}
+	}      
 
 
 ?>
