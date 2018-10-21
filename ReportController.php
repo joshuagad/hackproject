@@ -20,9 +20,27 @@
 			}
 			
 			function AddReport($rep){
-				
+				$rep->getImage() = $_FILES["Image"]['name'];
+				$output_dir = "uploads";//Path for file upload
+				$fileCount = count($_FILES["Image"]['name']);
+				$RandomNum = time();
+				$ImageName = str_replace(' ','-',strtolower($_FILES['Image']['name'][$i]));
+				$ImageType = $_FILES['Image']['type'][$i]; //"image/png", image/jpeg etc.
+				$ImageExt = substr($ImageName, strrpos($ImageName, '.'));
+				$ImageExt = str_replace('.','',$ImageExt);
+				$ImageName = preg_replace("/\.[^.\s]{3,4}$/", "", $ImageName);
+				$NewImageName = $ImageName.'-'.$RandomNum.'.'.$ImageExt;
+				$ret[$NewImageName]= $output_dir.$NewImageName;
+				move_uploaded_file($_FILES["Image"]["tmp_name"][$i],$output_dir."/".$NewImageName );
+				$data = array(
+				'image' =>$NewImageName
+				);
 				$sql = "INSERT INTO report (status, suspect_name, victim_name, latitude, longitude, image, video, witness_name, witness_email, witness_number) 
-				                    VALUES ('".$rep->getStatus()."', '".$rep->getSuspect_name."', '".$rep->getVictim_name()."', '".$rep->getLatitude()."', '".$rep->getLongtitude()."', '".$rep->getLongitude()."', '".$rep->getImage()."', '".$rep->getVideo()."', '".$rep->getWitness_name()."', '".$rep->getWitness_email()."', '".$rep->getWitness_number()."', '".$rep->getMessages();
+				                    VALUES ('".$rep->getStatus()."', '".$rep->getSuspect_name."', '".$rep->getVictim_name()."', '".$rep->getLatitude()."', '".$rep->getLongtitude()."', '".$rep->getLongitude()."', '".$data."', '".$rep->getVideo()."', '".$rep->getWitness_name()."', '".$rep->getWitness_email()."', '".$rep->getWitness_number()."', '".$rep->getMessages();
+				
+			}
+			
+			
 				$this->$con->query($sql);
 				$this->$con->close();
 			}
