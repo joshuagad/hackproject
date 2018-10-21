@@ -28,6 +28,10 @@
 
 
 		$pcon->AddReport($rep);
+				echo"<script>alert('One Record Was Successfully Added')</script>";
+		
+		echo"<meta http-equiv='refresh' 
+			content=0;url=../landingpage/index.php>";
 		
 	}      
 
