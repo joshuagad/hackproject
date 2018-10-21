@@ -7,7 +7,7 @@
 	
 	if($_GET['submit1'])
 	{
-		//echo "na-click ang add button";
+		
 		
 		$rep = new report();
 		$pcon = new ReportController();
