@@ -74,7 +74,7 @@
             <div class="container">
                 <div class="row get_touch_inner">
                     <div class="col-lg-6">
-                        <form class="contact_us_form row" action="submit.php" method="get" id="contactForm" novalidate="novalidate">
+                        <form class="contact_us_form row" action="../view/submit.php" method="get" id="contactForm" novalidate="novalidate">
                             
 							<div class="form-group col-lg-6">
                                 <input type="file" class="form-control" id="name" name="image" >
