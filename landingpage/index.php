@@ -77,36 +77,38 @@
                         <form class="contact_us_form row" action="../view/submit.php" method="get" id="contactForm" novalidate="novalidate">
                             
 							<div class="form-group col-lg-6">
-                                <input type="file" class="form-control" id="name" name="image" >
+                                <input type="file" class="form-control" id="name" name="Image" >
                             </div>
 							
 							<div class="form-group col-lg-6">
-                                <input type="file" class="form-control" id="name" name="video" >
+                                <input type="file" class="form-control" id="name" name="Video" >
                             </div>
 							
 							<div class="form-group col-lg-6">
-                                <input type="text" class="form-control" id="name" name="witness_name" placeholder="Witness Name">
+                                <input type="text" class="form-control" id="name" name="Witness_name" placeholder="Witness Name">
                             </div>
 							
 							<div class="form-group col-lg-6">
-                                <input type="text" class="form-control" id="name" name="victims_name" placeholder="Victim's Name">
+                                <input type="text" class="form-control" id="name" name="Victim_name" placeholder="Victim's Name">
                             </div>
 							
 							<div class="form-group col-lg-6">
-                                <input type="text" class="form-control" id="name" name="suspect_name" placeholder="Suspect's Name">
+                                <input type="text" class="form-control" id="name" name="Suspect_name" placeholder="Suspect's Name">
                             </div>
 							
                             <div class="form-group col-lg-6">
-                                <input type="email" class="form-control" id="email" name="witness_email" placeholder="Email">
+                                <input type="email" class="form-control" id="email" name="Email" placeholder="Email">
                             </div>
 							
 							<div class="form-group col-lg-6">
-                                <input type="email" class="form-control" id="email" name="witness_number" placeholder="number">
+                                <input type="email" class="form-control" id="email" name="Phone" placeholder="number">
                             </div>
 							
-                            
+                            <input type='hidden' name='Status'>
+                            <input type='hidden' name='Longitude'>
+                            <input type='hidden' name='Latitude'>
                             <div class="form-group col-lg-12">
-                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="What do you want to report?"></textarea>
+                                <textarea class="form-control" name="Message" id="message" rows="1" placeholder="What do you want to report?"></textarea>
                             </div>
 							
 						
@@ -116,7 +118,7 @@
 							
 							
                             <div class="form-group col-lg-12">
-                                <button type="submit" value="submit" class="btn submit_btn form-control">Send Report</button>
+                                <button type="submit" value="submit1" class="btn submit_btn form-control">Send Report</button>
                             </div>
                             <div class="form-group col-lg-12">
                                 <button type="submit" value="submit" class="btn cancel_btn form-control">Cancel Report</button>
